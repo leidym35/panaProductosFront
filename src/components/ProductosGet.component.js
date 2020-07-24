@@ -22,12 +22,13 @@ class Producto extends Component {
     deleteProducto(id) {
 
         axios.get('http://localhost:3001/productosDelete/' + id).then(res => {
-            if (res.status(400)) {
+            try{
+                alert("producto eliminado")
+            } catch(e){
                 alert("error")
             }
-            else {
-                alert("producto eliminado")
-            }
+               
+            
         })
     }
 
